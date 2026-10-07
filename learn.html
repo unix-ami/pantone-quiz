@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <title>Learn Pantone colours</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="study-page">
+  <main>
+    <nav class="mode-nav" aria-label="Quiz modes">
+      <a href="index.html">Quiz</a>
+      <a href="learn.html" aria-current="page">Learn colours</a>
+    </nav>
+    <header>
+      <h1>Learn the colours</h1>
+      <span id="study-count" aria-live="polite">Loading colours...</span>
+    </header>
+
+    <div class="study-controls">
+      <div class="study-filter">
+        <label for="family-filter">colour group</label>
+        <select id="family-filter">
+          <option value="neutral" selected>Neutral</option>
+          <option value="red-pink">Red/Pink</option>
+          <option value="orange-brown">Orange/Brown</option>
+          <option value="yellow">Yellow</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+        </select>
+      </div>
+      <span id="page-count" aria-live="polite"></span>
+    </div>
+
+    <section id="study-grid" class="study-grid" aria-label="colour study cards"></section>
+    <div class="study-pagination">
+      <button id="previous" type="button">Previous</button>
+      <button id="next-page" type="button">Next</button>
+    </div>
+    <p id="error" role="alert" hidden></p>
+  </main>
+  <script src="learn.js"></script>
+</body>
+</html>

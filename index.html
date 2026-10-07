@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <title>Pantone Colour Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <nav class="mode-nav" aria-label="Quiz modes">
+      <a href="index.html" aria-current="page">Quiz</a>
+      <a href="learn.html">Learn colours</a>
+    </nav>
+    <header>
+      <h1>Pantone colour Quiz</h1>
+      <span id="progress" aria-live="polite">Loading colours...</span>
+    </header>
+
+    <section id="quiz" hidden>
+      <div class="swatch" id="swatch" aria-label="colour swatch">
+        <span id="hex"></span>
+      </div>
+      <form id="answer-form">
+        <label for="guess">Guess the colour name</label>
+        <div class="answer-row">
+          <input id="guess" name="guess" type="text" autocomplete="off" required>
+          <button type="submit">Check</button>
+        </div>
+      </form>
+      <p id="feedback" role="status" aria-live="polite"></p>
+      <button id="next" type="button" hidden>Next colour</button>
+      <button id="restart" type="button" hidden>Play another round</button>
+    </section>
+
+    <p id="error" role="alert" hidden></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
